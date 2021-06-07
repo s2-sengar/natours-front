@@ -509,9 +509,10 @@ body {
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.8);
   padding: 4rem;
+  padding-left: 7rem;
   font-size: 1.6rem;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   -webkit-transform: skewX(-12deg);
           transform: skewX(-12deg);
 }
@@ -525,14 +526,12 @@ body {
   height: 15rem;
   float: left;
   shape-outside: circle(50% at 50% 50%);
-  -webkit-clip-path: circle(45% at 50% 50%);
-          clip-path: circle(45% at 50% 50%);
-  -webkit-transform: translateX(-1.8rem);
-          transform: translateX(-1.8rem);
-  -webkit-transform: skewX(12deg);
-          transform: skewX(12deg);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-3rem) skewX(12deg);
+          transform: translateX(-3rem) skewX(12deg);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   position: relative;
 }
 
@@ -548,7 +547,7 @@ body {
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .story-card__caption {
@@ -558,8 +557,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, 20rem);
-          transform: translate(-50%, 20rem);
+  -webkit-transform: translate(-50%, 2rem);
+          transform: translate(-50%, 2rem);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   opacity: 0;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
@@ -597,6 +598,52 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   opacity: .18;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  display: block;
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+  width: 90%;
+  border: none;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.form__input:focus {
+  outline: none;
+  -webkit-box-shadow: -0.4rem 1.2rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: -0.4rem 1.2rem 2rem rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #55c57a;
+}
+
+.form__input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.form__label {
+  display: block;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .5rem;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-3.8rem);
+          transform: translateY(-3.8rem);
 }
 
 .header {
@@ -712,5 +759,24 @@ body {
 .section-stories__btn {
   width: 100%;
   text-align: center;
+}
+
+.section-booking {
+  padding: 15rem 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to left, #7ed56f, #28b485);
+}
+
+.book {
+  margin: 0 auto;
+  background-image: linear-gradient(105deg, #fff 0%, #fff 50%, transparent 50%), url(../../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  padding: 5rem;
+  height: 50rem;
+}
+
+.book__form {
+  width: 50%;
 }
 /*# sourceMappingURL=style.css.map */
