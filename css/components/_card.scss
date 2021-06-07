@@ -18,15 +18,28 @@
             background-color: $color-white;
         }
         &--back{
-            background-image: linear-gradient(to bottom right,$color-secondary-light,$color-secondary-dark);
-            transform: rotateY(180deg);
+            &-1{
+                transform: rotateY(180deg);
+                background-image: linear-gradient(to bottom right,$color-secondary-light,$color-secondary-dark);
+            }
+            &-2{
+                transform: rotateY(180deg);
+                background-image: linear-gradient(to bottom right,$color-primary-light,$color-primary-dark);
+            }
+            &-3{
+                transform: rotateY(180deg);
+                background-image: linear-gradient(to bottom right,$color-tertiary-light,$color-tertiary-dark);
+                
+            }
         }
     }
     &:hover &__side--front{
         transform: rotateY(-180deg);
     }
     &:hover &__side--back{
-        transform: rotateY(0);
+        &-1,&-2,&-3{
+            transform: rotateY(0);
+        }
     }
 
     // front-side-content
@@ -39,6 +52,12 @@
         &--1{
             background-image:linear-gradient(to bottom right,$color-secondary-light,$color-secondary-dark), url(../../img/nat-5.jpg);
 
+        }
+        &--2{
+            background-image:linear-gradient(to bottom right,$color-primary-light,$color-primary-dark), url(../../img/nat-6.jpg);
+        }
+        &--3{
+            background-image:linear-gradient(to bottom right,$color-tertiary-light,$color-tertiary-dark), url(../../img/nat-7.jpg);
         }
     }
 
@@ -59,5 +78,34 @@
         &--1{
             background-image: linear-gradient(to right,rgba($color-secondary-light,0.8),rgba($color-secondary-dark,0.8));
         }
+        &--2{
+            background-image: linear-gradient(to right,rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8));
+        }
+        &--3{
+            background-image: linear-gradient(to right,rgba($color-tertiary-light,0.8),rgba($color-tertiary-dark,0.8));
+        }
     }
+    &__details--list{
+        text-align: center;
+        margin-top:3rem;
+        li{
+            margin-bottom: 1.4rem;
+        }
+    }
+    &__contents{
+        margin-top: 15rem;
+        text-align: center;
+        &--only{
+            color: $color-white;
+            font-weight: 400;
+            font-size: 1.6rem;
+        }
+        &--price{
+            color: $color-white;
+            font-weight: 100;
+            font-size:5rem;
+            margin-bottom:5rem;
+        }
+    }
+
 }
