@@ -8,9 +8,10 @@
     &__logo{ 
         width: 100%;
     }
-    &__navigation{
+    &__navigation,
+    &__copyright{
         display: inline-block;
-        border-top: 1px solid $color-white;
+        border-top: 1px solid rgba($color-white, .7);
         padding-top: 1rem;
 
     }

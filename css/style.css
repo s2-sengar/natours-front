@@ -709,9 +709,9 @@ body {
   width: 100%;
 }
 
-.footer__navigation {
+.footer__navigation, .footer__copyright {
   display: inline-block;
-  border-top: 1px solid #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
   padding-top: 1rem;
 }
 
