@@ -1,5 +1,6 @@
 .btn{
     position: relative;
+    &,
     &:link,&:visited{
         display: inline-block;
         text-decoration: none;
@@ -7,6 +8,8 @@
         padding: 15px 4rem;
         border-radius: 10rem;
         transition: all .2s;
+        // for button attribute
+        border: none;
     }
     &:hover{
         transform: translateY(-.3rem);
