@@ -972,6 +972,7 @@ body {
   .header {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
+    height: 90vh;
   }
 }
 
@@ -1080,13 +1081,7 @@ body {
 
 @media (max-width: 56.25em) {
   .section-about {
-    padding: 20rem 0;
-  }
-}
-
-@media (max-width: 37.5em) {
-  .section-about {
-    padding: 15rem 0;
+    padding: 23rem 0;
   }
 }
 
@@ -1191,7 +1186,7 @@ body {
 
 @media (max-width: 56.25em) {
   .book__form {
-    width: 100%;
+    width: 100% !important;
   }
 }
 
