@@ -6,8 +6,21 @@
 
 html{
     font-size: 62.5%;
+    @include mediaQuery(tab-land){
+        font-size: 56.25%; //1rem=9px
+    }
+    @include mediaQuery(tab-port){
+        font-size: 50%; //1rem=8px
+    }
+    @include mediaQuery(big-desktop){
+        font-size: 75%; //1rem=12px
+    }
 }
 
 body{
     box-sizing: border-box;
+    padding: 3rem;
+    @include mediaQuery(tab-port){
+        padding: 0;
+    }
 }

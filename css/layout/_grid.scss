@@ -5,13 +5,29 @@
     @include clearfix;
     &:not(:last-child){
         margin-bottom: $verticle-gutter;
+        @include mediaQuery(tab-port){
+            margin-bottom: 5rem;
+        }
     }
-
+    @include mediaQuery(tab-port){
+        max-width: 50rem;
+    }
+    @include mediaQuery(phone){
+        max-width: 40rem;
+    }
     [class^="col-"]{
         // background-color: orange;
         float: left;
         &:not(:last-child){
             margin-right: $horizontal-gutter;
+            @include mediaQuery(tab-port){
+                margin-right: 0;
+                margin-bottom: 5rem;
+            }
+        }
+
+        @include mediaQuery(tab-port){
+            width: 100% !important;
         }
     }
     .col{

@@ -5,3 +5,37 @@
         clear: both;
     }
 }
+
+// media query manager
+/*
+    0-600px:phone;
+    600-900:tablet;
+    900-1200:tablet landscape;
+    1200-1800 for normal 
+    1800+ for big desktop
+
+
+    1em=16px;
+*/
+@mixin mediaQuery($device) {
+    @if $device == phone {
+        @media (max-width:37.5em) {
+            @content
+        };
+    }
+    @if $device == tab-port{
+        @media (max-width:56.25em) {
+            @content
+        };
+    }
+    @if $device == tab-land{
+        @media (max-width:75em){
+            @content
+        };
+    }
+    @if $device == big-desktop{
+        @media (min-width:112.5em){
+            @content
+        };
+    }
+}
