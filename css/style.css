@@ -239,12 +239,6 @@ body {
   margin-bottom: 3rem;
 }
 
-@media (max-width: 37.5em) {
-  .paragraph {
-    font-size: 1rem;
-  }
-}
-
 .u-center-text {
   text-align: center !important;
 }
@@ -1138,7 +1132,7 @@ body {
 
 @media (max-width: 56.25em) {
   .section-stories {
-    padding: 10rem;
+    padding: 10rem 0;
   }
 }
 
@@ -1150,7 +1144,7 @@ body {
 
 @media (max-width: 56.25em) {
   .section-booking {
-    padding: 10rem;
+    padding: 10rem 0;
   }
 }
 

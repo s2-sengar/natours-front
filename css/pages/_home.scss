@@ -46,14 +46,15 @@
         text-align: center;
     }
     @include mediaQuery(tab-port){
-        padding: 10rem;
+        padding: 10rem 0;
     }
+
 }
 .section-booking{
     padding: 15rem 0;
     background-image: linear-gradient(to left , $color-primary-light, $color-primary-dark);
     @include mediaQuery(tab-port){
-        padding: 10rem;
+        padding: 10rem 0;
     }
 
 }

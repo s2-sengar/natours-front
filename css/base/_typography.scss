@@ -71,7 +71,5 @@ body{
     &:not(:last-child){
         margin-bottom: 3rem;
     }
-    @include mediaQuery(phone){
-        font-size: 1rem;
-    }
+
 }
